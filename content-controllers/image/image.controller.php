@@ -72,7 +72,7 @@ class ImageController implements ContentController
 
         if($hash===false)
         {
-            $hash = getNewHash($ext,6);
+            $hash = getNewHash($ext,16);
         }
         else
         {
