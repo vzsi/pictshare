@@ -20,8 +20,8 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            hascheksolutions/pictshare
-            ghcr.io/hascheksolutions/pictshare            
+            vzsi/pictshare
+            ghcr.io/vzsi/pictshare            
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
@@ -47,7 +47,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GH_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
